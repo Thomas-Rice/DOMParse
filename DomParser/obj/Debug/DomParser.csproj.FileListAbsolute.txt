@@ -1,0 +1,14 @@
+C:\Users\trice\source\repos\DomParser\DomParser\bin\Debug\DomParser.exe.config
+C:\Users\trice\source\repos\DomParser\DomParser\bin\Debug\DomParser.exe
+C:\Users\trice\source\repos\DomParser\DomParser\bin\Debug\DomParser.pdb
+C:\Users\trice\source\repos\DomParser\DomParser\bin\Debug\HtmlAgilityPack.dll
+C:\Users\trice\source\repos\DomParser\DomParser\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\trice\source\repos\DomParser\DomParser\bin\Debug\HtmlAgilityPack.xml
+C:\Users\trice\source\repos\DomParser\DomParser\obj\Debug\DomParser.csprojAssemblyReference.cache
+C:\Users\trice\source\repos\DomParser\DomParser\obj\Debug\DomParser.csproj.CoreCompileInputs.cache
+C:\Users\trice\source\repos\DomParser\DomParser\obj\Debug\DomParser.csproj.CopyComplete
+C:\Users\trice\source\repos\DomParser\DomParser\obj\Debug\DomParser.exe
+C:\Users\trice\source\repos\DomParser\DomParser\obj\Debug\DomParser.pdb
+C:\Users\trice\source\repos\DomParser\DomParser\bin\Debug\WebDriver.dll
+C:\Users\trice\source\repos\DomParser\DomParser\bin\Debug\WebDriver.xml
+C:\Users\trice\source\repos\DomParser\DomParser\bin\Debug\chromedriver.exe
