@@ -48,8 +48,8 @@ namespace DomParser
 
 
             ////FOR TESTING
-            //var elementLocator = new Locator();
-            //elementLocator.GetAllLocatorsXpath(_elementLocators.Locators.LastOrDefault().Xpath, _elementLocators);
+            var elementLocator = new Locator();
+            elementLocator.GetAllLocatorsXpath(_elementLocators.Locators.LastOrDefault().Xpath, _elementLocators);
 
             Console.ReadLine();
         }

@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Reflection;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
 
 namespace DomParser
 {
     public class Locator
     {
-        private ChromeDriver _driver;
+        private SeleniumOperations _seleniumOperations;
 
         public void GetAllLocatorsXpath(string xpathLocator, ElementLocators elementLocators)
         {
@@ -35,30 +32,7 @@ namespace DomParser
                 Console.WriteLine($"FOUND Link: {element.XpathAttributes.Link}");
             }
         }
-
-        public void Selenium()
-        {
-            _driver = new ChromeDriver(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location))
-            {
-                Url = "file:///C:/Users/trice/Desktop/new2.html"
-            };
-        }
-
-        public void SeleniumClassName(string xpath)
-        {
-            var test = xpath.Replace(' ', '.');
-            var element = _driver.FindElement(By.CssSelector(test));
-            element.Click();
-            _driver.Close();
-        }
-
-        public void SeleniumId(string xpath)
-        {
-            var test = xpath.Replace(' ', '.');
-            var element = _driver.FindElement(By.Id(test));
-            element.Click();
-            _driver.Close();
-        }
+        
 
         public void TryFindElementFromList(ElementLocator elementLocators)
         {
@@ -69,36 +43,36 @@ namespace DomParser
                 {
                     try
                     {
-                        Selenium();
+                        _seleniumOperations = new SeleniumOperations();
                         if (string.Equals(locator.Name, "class", StringComparison.CurrentCultureIgnoreCase))
                         {
-                            SeleniumClassName("k");
+                            _seleniumOperations.ClickOnElementClassName("k");;
                             Console.WriteLine($"Getting By Class {locator.Value}");
                             break;
                         }
 
                         if (locator.Name.ToLower() == "id".ToLower())
                         {
-                            SeleniumId(locator.Value);
+                            _seleniumOperations.ClickOnElementId(locator.Value);
                             Console.WriteLine($"Getting By ID {locator.Value}");
                             break;
                         }
 
                         if (locator.Name.ToLower() == "name".ToLower())
                         {
-                            SeleniumClassName(locator.Value);
+                            _seleniumOperations.ClickOnElementClassName(locator.Value);
                         }
 
                         if (locator.Name.ToLower() == "link".ToLower())
                         {
-                            SeleniumClassName(locator.Value);
+                            _seleniumOperations.ClickOnElementClassName(locator.Value);
                         }
                         
                     }
                     catch (NoSuchElementException e)
                     {
                         Console.WriteLine(e);
-                        _driver.Close();
+                        _seleniumOperations.CloseDriver();
                     }
                 }
 
